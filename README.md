@@ -24,7 +24,7 @@ double* pd = &d;
 ```
 Memory layout:
 
-![](docs/img/1-1.png)
+![](docs/img/ch01/1-1.png)
 
 
 
