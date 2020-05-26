@@ -1,6 +1,6 @@
 # 3D C++
 
-This are the codes and project files from the book: C++ Game Development by example.
+These are the source codes and project files from the book: C++ Game Development by example by Siddaharth Shekar
 
 # About
 
