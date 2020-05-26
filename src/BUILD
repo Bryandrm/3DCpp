@@ -7,4 +7,11 @@ cc_binary(
     deps = [
         "@glm-lib//:glm"
     ],
+    linkopts = [
+        "-lGL",
+        "-lglut",
+        "-lGLU",
+        "-lm",
+        "-lGLEW"
+    ],
 )
