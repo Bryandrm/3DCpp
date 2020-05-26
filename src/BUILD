@@ -3,5 +3,8 @@
 # Binary file
 cc_binary(
     name = "3DCpp",
-    srcs = ["3DCpp.cpp"]    
+    srcs = ["3DCpp.cpp"],
+    deps = [
+        "@glm-lib//:glm"
+    ],
 )
