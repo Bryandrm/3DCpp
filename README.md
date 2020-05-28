@@ -44,12 +44,20 @@ For the left-hand coordinate system, extend your left arm out with the palm of t
 ![](docs/img/ch02/2-1.png)
 
 Since we are going to be covering OpenGL and Vulkan, we will be using
-the Right Hand Coordinate System:
+the Right Hand Coordinate System.
+
+## Chapter Three: Setting Up the Game
+
 
 ## Running needs
 
 1. [Bazel](https://bazel.build/) as a building tool
 
+## Dependencies
+
+We are running over SMLF library:
+
+`sudo apt-get install libsfml-dev`
 
 ## Reference
 

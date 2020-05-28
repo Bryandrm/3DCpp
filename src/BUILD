@@ -12,6 +12,9 @@ cc_binary(
         "-lglut",
         "-lGLU",
         "-lm",
-        "-lGLEW"
+        "-lGLEW",
+        "-lsfml-graphics",
+        "-lsfml-window", 
+        "-lsfml-system",
     ],
 )
