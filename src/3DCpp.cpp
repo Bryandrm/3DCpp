@@ -14,6 +14,7 @@ void drawScene(void) {
 
     // Draw a polygon with specified vertices.
     glBegin(GL_POLYGON);
+    // glVertex3f correspond to a point (x,y,z) in world space
     glVertex3f(20.0, 20.0, 0.0);
     glVertex3f(80.0, 20.0, 0.0);
     glVertex3f(80.0, 80.0, 0.0);
