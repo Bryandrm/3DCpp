@@ -40,24 +40,32 @@ void draw() {
     window.draw(heroSprite);
 }
 
+void updateInput() {
+    sf::Event event;
+    while (window.pollEvent(event)) {
+        if (event.key.code == sf::Keyboard::Escape ||
+            event.type == sf::Event::Closed ) {
+            window.close();
+        }
+    }
+}
+
 int main(int argc, char **argv) {
     //
     std::cout << "Starting rendering!\n";
     // Initialize game objects
     init();
     while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-            window.close();
-        }
         // Handle Keyboard Events
+        updateInput();
         // Update Game Objects
         window.clear(sf::Color::Red);
         // Render Game Objects
         draw();
         window.display();
     }
+
+    std::cout << "Close rendering!\n";
 
     return 0;
 }
