@@ -5,7 +5,7 @@ cc_binary(
     name = "3DCpp",
     srcs = ["3DCpp.cpp"],
     deps = [
-        "@glm-lib//:glm"
+        "@glm-lib//:glm",
     ],
     linkopts = [
         "-lGL",
@@ -17,4 +17,7 @@ cc_binary(
         "-lsfml-window", 
         "-lsfml-system",
     ],
+    data = [
+        "//Assets:images"
+    ]
 )
