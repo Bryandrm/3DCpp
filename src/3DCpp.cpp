@@ -15,6 +15,11 @@ sf::Sprite bgSprite;
 sf::Texture heroTexture;
 sf::Sprite heroSprite;
 
+// Player position
+sf::Vector2f playerPosition;
+bool playerMoving = false;
+
+
 
 // Initialization function
 void init() {
@@ -47,18 +52,38 @@ void updateInput() {
             event.type == sf::Event::Closed ) {
             window.close();
         }
+
+        if (event.type == sf::Event::KeyPressed &&
+            event.key.code == sf::Keyboard::Right) {
+            playerMoving = true;
+        }
+
+        if (event.type == sf::Event::KeyReleased &&
+            event.key.code == sf::Keyboard::Right) {
+            playerMoving = false;
+        }
+    }
+}
+
+void update(float deltaTime) {
+    if (playerMoving) {
+        heroSprite.move(50.0f * deltaTime, 0);
     }
 }
 
 int main(int argc, char **argv) {
     //
     std::cout << "Starting rendering!\n";
+    sf::Clock clock;
     // Initialize game objects
     init();
     while (window.isOpen()) {
         // Handle Keyboard Events
         updateInput();
         // Update Game Objects
+        sf::Time dt = clock.restart();
+        update(dt.asSeconds());
+        // Clearing Game objects
         window.clear(sf::Color::Red);
         // Render Game Objects
         draw();
